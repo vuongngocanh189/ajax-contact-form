@@ -74,7 +74,7 @@
 <script>
     /* global $ */
     $(document).ready(function(){
-      $('#submit-btn').click(function(){
+      $('#submit-btn').click(function(event){
         event.preventDefault();
          $.ajax({
             dataType: 'JSON',
