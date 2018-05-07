@@ -8,5 +8,5 @@ Link to my blog post: [AJAX Contact Form: Sending Emails Without Refreshing Page
 
 ## Demo
 
-You also can contact me from here: [AJAX Contact Form Demo)](https://funnyreino.com/ajax-contact-form/)
+You also can contact me from here: [AJAX Contact Form Demo](https://funnyreino.com/ajax-contact-form/)
 
