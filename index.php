@@ -66,6 +66,11 @@
                     </div>
                   </div>
             </form>  
+         <div class="panel-footer">
+            <article>
+				       <p>This is a sample website from <a href="https://funnyreino.com" target="_blank">FunnyReino</a>. Click here for the <a href="https://funnyreino.com/ajax-contact-form-without-refreshing/" target="_blank">tutorial and source code</a> of this page.</p>			
+            </article>
+		    </div>
         </div>
     </div>
 </section>
