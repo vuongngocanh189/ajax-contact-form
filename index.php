@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <body>
 <head>
-  <title>Contact Form</title>
+  <title>AJAX Contact Form</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
@@ -66,11 +66,11 @@
                     </div>
                   </div>
             </form>  
-         <div class="panel-footer">
-            <article>
-				       <p>This is a sample website from <a href="https://funnyreino.com" target="_blank">FunnyReino</a>. Click here for the <a href="https://funnyreino.com/ajax-contact-form-without-refreshing/" target="_blank">tutorial and source code</a> of this page.</p>			
-            </article>
-		    </div>
+	       <div class="panel-footer">
+			<article>
+				<p>This is a sample website from <a href="https://anhkarppinen.com" target="_blank">Ani's Webdev Blog</a>. Click here for the <a href="https://anhkarppinen.com/ajax-contact-form-without-refreshing/" target="_blank">tutorial and source code</a> of this page.</p>			
+                        </article>
+		</div>
         </div>
     </div>
 </section>
