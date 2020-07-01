@@ -4,7 +4,6 @@
 // then click the URL that is emitted to the Output tab of the console
 ?>
 <!DOCTYPE html>
-<body>
 <head>
   <title>AJAX Contact Form</title>
   <meta charset="UTF-8" />
@@ -22,56 +21,57 @@
     		-webkit-background-size: cover;
     	  	-moz-background-size: cover;
     	  	-o-background-size: cover;
-    	}	
+    	}
     	form{
     	  margin-top: 25px;
     	}
       #submit-btn
       {
-          width: 100%;    
+          width: 100%;
       }
   </style>
 </head>
+<body>
 <section>
     <div class="container">
-        <div class="col-md-6 col-md-offset-6">
-            <form id="contact" class="form-horizontal well">
-                <div class="form-group">
-                    <div class="col-sm-10 col-sm-offset-2">
-                       <h3>Contact Me!</h3>
-                    </div>
-                  </div>
-                 <div class="form-group">
-                    <label for="name" class="col-sm-2 control-label">Name</label>
-                    <div class="col-sm-10">
-                      <input type="name" class="form-control" name="name" id="name" placeholder="Your name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Message</label>
-                    <div class="col-sm-10">
-                      <textarea rows="10" cols="100" name="message" id="message" class="form-control" style="resize:none" placeholder="Your message"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                       <div id="msg"></div>
-                       <button class="btn btn-lg btn-info pull-right" id="submit-btn">SEND MESSAGE</button>
-                    </div>
-                  </div>
-            </form>  
-	       <div class="panel-footer">
-			<article>
-				<p>This is a sample website from <a href="https://anhkarppinen.com" target="_blank">Ani's Webdev Blog</a>. Click here for the <a href="https://anhkarppinen.com/ajax-contact-form-without-refreshing/" target="_blank">tutorial and source code</a> of this page.</p>			
-                        </article>
-		</div>
-        </div>
+      <div class="col-md-6 col-md-offset-6">
+          <form id="contact" class="form-horizontal well">
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                 <h3>Contact Me!</h3>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="name" class="form-control" name="name" id="name" placeholder="Your name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Message</label>
+              <div class="col-sm-10">
+                <textarea rows="10" cols="100" name="message" id="message" class="form-control" style="resize:none" placeholder="Your message"></textarea>
+              </div>
+            </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                   <div id="msg"></div>
+                   <button class="btn btn-lg btn-info pull-right" id="submit-btn">SEND MESSAGE</button>
+                </div>
+              </div>
+          </form>
+        <div class="panel-footer">
+    			<article>
+    				<p>This is a sample website from <a href="https://anhkarppinen.com" target="_blank">Ani's Webdev Blog</a>. Click here for the <a href="https://anhkarppinen.com/ajax-contact-form-without-refreshing/" target="_blank">tutorial and source code</a> of this page.</p>
+          </article>
+	      </div>
+      </div>
     </div>
 </section>
 </body>
@@ -92,7 +92,7 @@
             success: function(response){
               if(response){
                 console.log(response);
-                if(response['signal'] == 'ok'){
+                if(response['isSuccess']){
                  $('#msg').html('<div class="alert alert-success">'+ response['msg']  +'</div>');
                   $('input, textarea').val(function() {
                      return this.defaultValue;
