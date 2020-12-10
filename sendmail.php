@@ -12,9 +12,19 @@
         $msg = 'Invalid email. Please check';
       }
       else{
+          // Format the checkbox values
+          $interest_message = '';
+          for ($i = 0; $i < count($interest); $i++) {
+            if ($i === $interest.length - 1) {
+              $interest_message .= $interest[$i];
+            } else {
+              $interest_message .= $interest[$i] . ', ';
+            }
+          }
+
           $mail = new PHPMailer;
           $mail->isSMTP();                                      // Set mailer to use SMTP
-          $mail->Host = '';   // Specify main and backup SMTP servers
+          $mail->Host = '';  // Specify main and backup SMTP servers
           $mail->SMTPAuth = true;                               // Enable SMTP authentication
           $mail->Username = '';                 // SMTP username
           $mail->Password = '';                           // SMTP password
@@ -24,11 +34,11 @@
           $mail->setFrom('', '');
           $mail->addAddress('', '');     // Add a recipient
           $mail->addReplyTo($email, $name);
-
+          $mail->addBcc($email);
           $mail->isHTML(true);                                  // Set email format to HTML
 
           $mail->Subject = 'Email from AJAX Contact form';
-          $mail->Body    = 'Name: ' . $name . ' <br />Message: ' . $message . ' <br />Interest: ' . $interest;
+          $mail->Body    = 'Name: ' . $name . ' <br />Message: ' . $message . ' <br />Interest: ' . $interest_message;
 
           if(!$mail->send()) {
               echo 'Message could not be sent.';
