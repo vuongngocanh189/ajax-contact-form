@@ -16,6 +16,7 @@
       .card {
         margin: 1rem 0;
         padding: 1rem;
+        background-color: #f7f7f9;
       }
       form,
       article {
