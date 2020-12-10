@@ -44,7 +44,7 @@
 <section>
   <div class="overlay"></div>
   <div class="container">
-    <div class="col-md-6 offset-md-6">
+    <div class="col-lg-6 offset-lg-6">
 
       <div class="card">
         <div class="card-body">
@@ -70,15 +70,15 @@
               <label for="email" class="col-sm-3 col-form-label font-weight-bold">Interest</label>
               <div class="col-sm-9">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="web" value="Web">
+                  <input class="form-check-input" name="interest[]" type="checkbox" value="Web">
                   <label class="form-check-label" for="web">Web</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="app" value="App">
+                  <input class="form-check-input" name="interest[]" type="checkbox" value="App">
                   <label class="form-check-label" for="app">App</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="game" value="Game">
+                  <input class="form-check-input" name="interest[]" type="checkbox" value="Game">
                   <label class="form-check-label" for="game">Game</label>
                 </div>
               </div>

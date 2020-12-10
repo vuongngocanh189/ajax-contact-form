@@ -2,8 +2,10 @@
     require('phpmailer/PHPMailerAutoload.php');
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
+    $interest = $_POST['interest'];
     $message = trim($_POST['message']);
-    if($name != null && $email != null && $message != null){
+
+    if($name && $email && $message){
   		if(!filter_var($email, FILTER_VALIDATE_EMAIL))
   		{
         $isSuccess = false;
@@ -12,7 +14,7 @@
       else{
           $mail = new PHPMailer;
           $mail->isSMTP();                                      // Set mailer to use SMTP
-          $mail->Host = '';  // Specify main and backup SMTP servers
+          $mail->Host = '';   // Specify main and backup SMTP servers
           $mail->SMTPAuth = true;                               // Enable SMTP authentication
           $mail->Username = '';                 // SMTP username
           $mail->Password = '';                           // SMTP password
@@ -26,7 +28,7 @@
           $mail->isHTML(true);                                  // Set email format to HTML
 
           $mail->Subject = 'Email from AJAX Contact form';
-          $mail->Body    = 'Name: '.$name.' <br />Message: '.$message;
+          $mail->Body    = 'Name: ' . $name . ' <br />Message: ' . $message . ' <br />Interest: ' . $interest;
 
           if(!$mail->send()) {
               echo 'Message could not be sent.';
@@ -45,5 +47,6 @@
         'isSuccess' => $isSuccess,
         'msg' => $msg
     );
+
     echo json_encode($data);
 ?>
