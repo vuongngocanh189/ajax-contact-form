@@ -10,11 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
   <style>
-      html{
+      html {
     		height: 100%;
     		min-height: 100%;
     	}
-    	body{
+    	body {
     		background: url('bg.jpg') no-repeat fixed;
     		min-height: 100%;
     		background-size: cover;
@@ -22,17 +22,26 @@
     	  	-moz-background-size: cover;
     	  	-o-background-size: cover;
     	}
-    	form{
+    	form {
     	  margin-top: 25px;
     	}
-      #submit-btn
-      {
-          width: 100%;
+      #submit-btn {
+        width: 100%;
+      }
+      .overlay{
+        background-color: #555;
+        background: rgba(0,0,0, 0.5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
       }
   </style>
 </head>
 <body>
 <section>
+    <div class="overlay"></div>
     <div class="container">
       <div class="col-md-6 col-md-offset-6">
           <form id="contact" class="form-horizontal well">
