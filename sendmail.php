@@ -15,7 +15,7 @@
           // Format the checkbox values
           $interest_message = '';
           for ($i = 0; $i < count($interest); $i++) {
-            if ($i === $interest.length - 1) {
+            if ($i === count($interest) - 1) {
               $interest_message .= $interest[$i];
             } else {
               $interest_message .= $interest[$i] . ', ';
